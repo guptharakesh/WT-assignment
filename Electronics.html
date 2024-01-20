@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Products</title>
+    <style>
+        body {
+            background-image: url('logo.png');
+            background-size:  100%; /* You can use 'cover', 'contain', or specific dimensions */
+            background-repeat: no-repeat;
+            background-position: center center; /* Adjust the position if needed */
+    /* Additional styles for the body */
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Electronics Products</h1>
+    </header>
+
+    <div class="product-container">
+        <div class="product">
+            <img src="product-image.jpg" alt="Realme 9 speed edition">
+            <h3>Realme 9 speed edition</h3>
+            <p>Price: Rs 16999</p>
+        </div>
+
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Lenovo IdeaPad 1 AMD Athlon Dual Core 7120U - (8 GB/512 GB SSD/Windows 11 Home)</h3>
+            <p>Price: Rs 28890</p>
+        </div>
+        <div class="product">
+           <img src="product3.jpg" alt="Product 2">
+            <h3>Xiaomi Pad 6 8 GB RAM 256 GB ROM 11.0 inch with Wi-Fi Only Tablet (Mist Blue)</h3>
+             <p>Price: Rs 28890</p>
+        </div>
+        <div class="product">
+            <h3>More products are coming soon :)</h3>
+            <p>Stay tuned</p>
+        </div>
+        <!-- Add more products as needed -->
+
+    </div>
+
+    <script>
+        // JavaScript for zooming images
+        const products = document.querySelectorAll('.product img');
+
+        products.forEach(product => {
+            product.addEventListener('mousemove', (e) => {
+                const boundingBox = product.getBoundingClientRect();
+                const offsetX = e.clientX - boundingBox.left;
+                const offsetY = e.clientY - boundingBox.top;
+                const percentageX = offsetX / boundingBox.width * 100;
+                const percentageY = offsetY / boundingBox.height * 100;
+
+                product.style.transformOrigin = `${percentageX}% ${percentageY}%`;
+                product.style.transform = 'scale(1.5)';
+            });
+
+            product.addEventListener('mouseleave', () => {
+                product.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+</body>
+</html>
