@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Categories</title>
+  <style>
+    body {
+        background-image: url('logo.png');
+        background-size:  cover; /* You can use 'cover', 'contain', or specific dimensions */
+        background-repeat: no-repeat;
+        background-position: center center; /* Adjust the position if needed */
+    /* Additional styles for the body */
+        margin: 0;
+        padding: 0;
+        font-family: Georgia, serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .category-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .category-card {
+      width: 200px;
+      margin: 10px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .category-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .category-card h3 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Categories</h1>
+  </header>
+
+  <section>
+    <div class="category-container">
+      <!-- Category 1 -->
+      <div class="category-card">
+        <img src="Category 1.jpg" alt="Category 1">
+        <h3>Electronics</h3>
+        <p>Find the latest gadgets and electronics here.</p>
+        <a href="Electronics.html">Explore</a>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="category-card">
+        <img src="Category 2.jpg" alt="Category 2">
+        <h3>Clothing</h3>
+        <p>Discover the trendiest fashion styles for all seasons.</p>
+        <a href="Clothing.html">Explore</a>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="category-card">
+        <img src="Category 3.jpg" alt="Category 3">
+        <h3>Home &amp; Furniture</h3>
+        <p>Decorate your space with our stylish home accessories.</p>
+        <a href="Furniture.html">Explore</a>
+      </div>
+
+      <!-- Add more categories as needed -->
+    </div>
+  </section>
+
+</body>
+</html>
